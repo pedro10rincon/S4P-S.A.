@@ -1,50 +1,36 @@
 
-
-// Función para abrir el modal
-function abrirModal() {
-    document.getElementById("modal-contactos").style.display = "block";
-   }
-   
-   // Función para cerrar el modal
-   function cerrarModal() {
-    document.getElementById("modal-contactos").style.display = "none";
-   }
+const botonContactoHeader = document.getElementById('boton-contacto-header');
+const modalContacto = document.getElementById('modal-contacto');
+botonContactoHeader.addEventListener('click', () => {
+    modalContacto.style.display = 'block';
+});
 
 
+const botonCerrar = document.getElementById("cerrar-modal");
+botonCerrar.addEventListener("click", function() {
+    const modal = document.getElementById("modal-contacto");
+    modal.style.display = "none";
+});
 
 
-   let slideIndex = 1;
-   let slides = document.getElementsByClassName("slide");
-   
-   function mostrarSlide(n) {
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-    }
-    slides[slideIndex-1].style.display = "block";
-   }
-   
-   function anteriorSlide() {
-    mostrarSlide(slideIndex -= 1);
-   }
-   
-   function siguienteSlide() {
-    mostrarSlide(slideIndex += 1);
-   }
-   
-   mostrarSlide(slideIndex);
-   
-   // Función para abrir el modal
-   function abrirModalNosotros() {
-    document.getElementById("modal-nosotros").style.display = "block";
-   }
-   
-   // Función para cerrar el modal
-   function cerrarModalNosotros() {
-    document.getElementById("modal-nosotros").style.display = "none";
-   }
-   
 
 
-   
+
+const botonCerrar2= document.getElementById("cerrar-modal-nosotros");
+botonCerrar2.addEventListener("click", function() {
+    const modal_nosotros = document.getElementById("modal-nosotros");
+    modal_nosotros.style.display = "none";
+});
+
+
+// Selecciona el botón "Nosotros"
+const botonNosotros = document.getElementById("boton-nosotros-header");
+
+// Selecciona el diálogo flotante
+const dialogoFlotante = document.getElementById("dialogo-flotante");
+
+// Agrega un evento de clic al botón "Nosotros"
+botonNosotros.addEventListener("click", function() {
+    dialogoFlotante.style.display = "block";
+});
+
